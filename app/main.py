@@ -19,3 +19,4 @@ def health_check():
 def health_db(db: Session = Depends(get_db)):
     db.execute(text("SELECT 1"))
     return {"database": "ok"}
+
